@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
-*{
-  font-family: outfit;
+@theme {
+  /* == Colors == */
+  --color-theme-light-hover: #fcf4ff;
+  --color-theme-dark-hover: #2a004a;
+  --color-theme-dark-bg: #11001F;
+  
+
+  /* == Fonts == */
+  --font-family-sans: "Outfit", sans-serif;
+  --font-family-ovo: "Ovo", serif;
+  
+
+
+  /* == Shadows == */
+  --shadow-black: 4px 4px 0 #000;
+  --shadow-white: 4px 4px 0 #fff;
+  
+
+
+  /* == Spacing / Line Height == */
+  --line-height-base: 1.6;
+  
 }
