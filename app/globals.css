@@ -1,25 +1,51 @@
-@import "tailwindcss";
+ @import "tailwindcss"; 
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   /* == Colors == */
-  --color-theme-light-hover: #fcf4ff;
-  --color-theme-dark-hover: #2a004a;
-  --color-theme-dark-bg: #11001F;
-  
+  --color-lightHover: #fcf4ff;
+  --color-darkHover: #2a004a;
+  --color-darkTheme: #000;
+  /* --color-darkTheme: #11001F; */
 
   /* == Fonts == */
-  --font-family-sans: "Outfit", sans-serif;
-  --font-family-ovo: "Ovo", serif;
+  --font-Outfit: "Outfit", sans-serif;
+  --font-Ovo: "Ovo", serif;
   
 
 
   /* == Shadows == */
   --shadow-black: 4px 4px 0 #000;
   --shadow-white: 4px 4px 0 #fff;
-  
 
 
   /* == Spacing / Line Height == */
   --line-height-base: 1.6;
+
+  /* --darkTheme:selector; */
   
 }
+.font-Outfit{
+  font-family: var(--font-Outfit);
+}
+.font-Ovo{
+  font-family: var(--font-Ovo);
+}
+
+/* Grid template Column */
+ .grid-cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+} 
+
+
+ .navbar-bg {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.3s;
+} 
+ .dark .navbar-bg {
+  background: rgba(0,0,0,0.8);  
+ box-shadow: 0 2px 8px rgba(255,255,255,0.08);
+}  
